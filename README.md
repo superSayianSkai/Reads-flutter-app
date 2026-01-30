@@ -1,21 +1,46 @@
-# reads
-
 ## Reads 
 
 ## Getting Started
 Reads is a blogging app i am building as part of Blinq's assesmennt test. This repository showcase my progress with app so far.
 
 ## Current Progress
-- Integrated custom themedata, colors, and typogrpahy(Google fonts)
-- Implemented Providers has the single source of truth for the app's state
+- Integrated custom themedata, colors, and typography (Google fonts)
+- Implemented Providers as the single source of truth for the app's state
 - Implemented a category carousel in the AppBar
 - Defined a fake Blog data and a model to structure 20 posts
+- Implemented dynamic filtering of blog posts by category
+- Added a "Recommended" section highlighting specific posts
+- Created reusable UI components (`ShowCase`, `ShowcaseRecommendedCategories`) for blog post cards
+- Added utility extensions for string manipulation
 
-Project Struture
-- lib/models
-- lib/screens
-- lib/service
-- lib/state
-- lib/utils
-- lib/widgets
-- assets/images
+## Project Structure
+
+```markdown
+. 📂 assets
+└── 📂 images/
+│  ├── 📄 girl-removebg.png
+│  ├── 📄 girl.png
+│  └── 📄 girl2.png
+```
+
+```markdown
+. 📂 lib
+├── 📄 main.dart
+└── 📂 models/
+│  ├── 📄 blog.dart
+└── 📂 screens/
+│  ├── 📄 home.dart
+└── 📂 service/
+│  ├── 📄 fakeBlogData.dart
+└── 📂 state/
+│  ├── 📄 blog_provider.dart
+└── 📂 utils/
+│  ├── 📄 app_theme_colors.dart
+│  ├── 📄 app_theme_fonts.dart
+│  ├── 📄 app_theme_spacing.dart
+│  ├── 📄 string_extension.dart
+└── 📂 widgets/
+│  ├── 📄 categories.dart
+│  ├── 📄 showcase_categories.dart
+│  └── 📄 showcase_recommended_categories.dart
+```
