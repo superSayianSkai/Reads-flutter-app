@@ -1,7 +1,34 @@
 const fakeBlogData = [
   {
     "id": 1,
-    "category": "Body",
+    "category": "Body & Recovery",
+    "title": "Pelvic Floor Health and Incontinence",
+    "isRecommended": false,
+    "duration": "2mins",
+    "type": "video",
+    "authorsName": "Dr. Sledge Vaneem",
+    "occupation": "Pelvic Specialist",
+    "date": "6th June 2025",
+    "content":
+        "In this video, Dr. Vaneem explains how the pelvic floor muscles are affected by pregnancy and birth. We cover gentle exercises to regain bladder control and strengthen the core safely during the first six weeks of recovery.",
+  },
+
+  {
+    "id": 2,
+    "category": "Self-care",
+    "title": "Finding Small Moments for Yourself",
+    "isRecommended": false,
+    "duration": "2mins",
+    "type": "article",
+    "authorsName": "Sarah Jenkins",
+    "occupation": "Postpartum Coach",
+    "date": "10th October 2025",
+    "content":
+        "Self-care after a baby isn't about long spa days; it's about the 5-minute windows. Whether it's a hot cup of tea or a short breathing exercise, reclaiming small moments of your day is vital for your mental resilience.",
+  },
+  {
+    "id": 3,
+    "category": "Mind and mood",
     "title": "Dealing with pain during postpartum",
     "isRecommended": true,
     "duration": "2mins",
@@ -11,32 +38,6 @@ const fakeBlogData = [
     "date": "6th October 2025",
     "content":
         "The postpartum period, which follows childbirth, is a time of physical healing and adjustment for mothers. Experiencing pain is common and can vary in intensity depending on the type of delivery and individual recovery. Understanding and managing postpartum pain is crucial for comfort, mobility, and overall well-being. One of the most common postpartum pains is perineal pain, especially after vaginal delivery. This area, which may have experienced tears or an episiotomy, can feel sore and sensitive. Applying ice packs, using sitz baths, and taking prescribed pain relievers can help alleviate discomfort.",
-  },
-  {
-    "id": 2,
-    "category": "Body",
-    "title": "Pelvic Floor Health and Incontinence",
-    "isRecommended": true,
-    "duration": "2mins",
-    "type": "video",
-    "authorsName": "Dr. Sledge Vaneem",
-    "occupation": "Pelvic Specialist",
-    "date": "6th June 2025",
-    "content":
-        "In this video, Dr. Vaneem explains how the pelvic floor muscles are affected by pregnancy and birth. We cover gentle exercises to regain bladder control and strengthen the core safely during the first six weeks of recovery.",
-  },
-  {
-    "id": 3,
-    "category": "Self-care",
-    "title": "Finding Small Moments for Yourself",
-    "isRecommended": true,
-    "duration": "2mins",
-    "type": "article",
-    "authorsName": "Sarah Jenkins",
-    "occupation": "Postpartum Coach",
-    "date": "10th October 2025",
-    "content":
-        "Self-care after a baby isn't about long spa days; it's about the 5-minute windows. Whether it's a hot cup of tea or a short breathing exercise, reclaiming small moments of your day is vital for your mental resilience.",
   },
   {
     "id": 4,
@@ -79,7 +80,7 @@ const fakeBlogData = [
   },
   {
     "id": 7,
-    "category": "Body",
+    "category": "Body & Recovery",
     "title": "Gentle Movement: Starting Safely",
     "isRecommended": false,
     "duration": "2mins",
@@ -144,7 +145,7 @@ const fakeBlogData = [
   },
   {
     "id": 12,
-    "category": "Body",
+    "category": "Body & Recovery",
     "title": "C-Section Recovery 101",
     "isRecommended": false,
     "duration": "4mins",
@@ -209,7 +210,7 @@ const fakeBlogData = [
   },
   {
     "id": 17,
-    "category": "Body",
+    "category": "Body & Recovery",
     "title": "Breastfeeding and Back Pain",
     "isRecommended": false,
     "duration": "2mins",

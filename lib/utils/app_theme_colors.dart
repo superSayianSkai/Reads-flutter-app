@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
 class AppThemeColors {
-  static final scafoldbackground = const Color(0xFFEFE9E3);
+  static final scafoldbackground = const Color(0xFFf8f2eb);
 }

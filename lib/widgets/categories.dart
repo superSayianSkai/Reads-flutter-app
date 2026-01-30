@@ -16,7 +16,10 @@ class Categories extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
       ),
       child: Center(
-        child: Text(category, style: Theme.of(context).textTheme.bodyMedium),
+        child: Text(
+          category,
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
       ),
     );
   }

@@ -4,6 +4,7 @@ class Blog {
   final String title;
   final bool isRecommended;
   final String duration;
+  final String type;
   final String authorsName;
   final String occupation;
   final String date;
@@ -15,6 +16,7 @@ class Blog {
     required this.title,
     required this.isRecommended,
     required this.duration,
+    required this.type,
     required this.authorsName,
     required this.occupation,
     required this.date,
@@ -28,6 +30,7 @@ class Blog {
       title: json["title"],
       isRecommended: json["isRecommended"],
       duration: json["duration"],
+      type: json["type"],
       authorsName: json["authorsName"],
       occupation: json["occupation"],
       date: json["date"],
