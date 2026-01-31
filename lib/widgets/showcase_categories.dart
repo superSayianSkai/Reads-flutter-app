@@ -1,35 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:reads/utils/app_theme_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:reads/state/blog_provider.dart';
 import 'package:reads/utils/app_theme_spacing.dart';
 import 'package:reads/utils/string_extension.dart';
 
 class ShowCase extends StatelessWidget {
+  final bool normalUse;
   final String type;
   final String duration;
   final String topic;
+  final String tappedUpperCategory;
+  final String category;
 
   const ShowCase({
     super.key,
     required this.topic,
     required this.duration,
     required this.type,
+    required this.normalUse,
+    required this.category,
+    required this.tappedUpperCategory,
   });
 
   @override
   Widget build(BuildContext context) {
+    final blogProvider = context.watch<BlogProvider>();
+    print(category);
     return Padding(
       padding: const EdgeInsets.fromLTRB(1, 10, 0, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          if (tappedUpperCategory != "All topics") AppThemeSpacing.largeSpacing,
           Container(
-            width: MediaQuery.of(context).size.width * 0.75,
+            width: normalUse && tappedUpperCategory.contains('All topics')
+                ? MediaQuery.of(context).size.width * 0.75
+                : MediaQuery.of(context).size.width * 0.92,
             height: 150,
             padding: EdgeInsets.zero,
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(
-              color: Color(0xFFffe6c7),
+              color: tappedUpperCategory == "All topics"
+                  ? blogProvider.getCategoryColor(category)
+                  : Colors.white,
               borderRadius: BorderRadius.circular(15),
             ),
             child: Stack(

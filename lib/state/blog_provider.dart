@@ -1,8 +1,8 @@
-
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:reads/models/blog.dart';
 import 'package:reads/service/fakeBlogData.dart';
+import 'package:reads/utils/app_theme_colors.dart';
 
 class BlogProvider extends ChangeNotifier {
   List<Blog> _blogs = [];
@@ -11,6 +11,7 @@ class BlogProvider extends ChangeNotifier {
   List<String> _blogDuration = [];
   List<String> _blogType = [];
   List<bool> _isRecommended = [];
+  String _tapedCategory = "All topics";
 
   List<String> get blogCategories => _blogCategories;
   List<Blog> get blog => _blogs;
@@ -18,6 +19,7 @@ class BlogProvider extends ChangeNotifier {
   List<String> get blogDuration => _blogDuration;
   List<String> get blogType => _blogType;
   List<bool> get isRecommended => _isRecommended;
+  String get tapedCategory => _tapedCategory;
 
   BlogProvider() {
     _blogs = fakeBlogData.map((json) => Blog.fromJson(json)).toList();
@@ -54,5 +56,27 @@ class BlogProvider extends ChangeNotifier {
 
   List<Blog> getByCategory(String category) {
     return _blogs.where((element) => element.category == category).toList();
+  }
+
+  void getTapedCategory(String category) {
+    _tapedCategory = category;
+    notifyListeners();
+  }
+
+  //
+  Color getCategoryColor(String category) {
+    switch (category) {
+      case 'Body & Recovery':
+        return AppThemeColors.bodyandRecoveryCard;
+      case 'Self-care':
+        return AppThemeColors.selfCareCard;
+      case "Mind and mood":
+        return AppThemeColors.mindAndMood;
+      case 'Cultural care':
+        return AppThemeColors.culturalCase;
+      case 'Baby care':
+        return AppThemeColors.babyCare;
+    }
+    return AppThemeColors.defaultColor;
   }
 }

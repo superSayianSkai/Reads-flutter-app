@@ -22,7 +22,6 @@ Reads is a blogging app i am building as part of Blinq's assesmennt test. This r
 │  ├── 📄 girl.png
 │  └── 📄 girl2.png
 ```
-
 ```markdown
 . 📂 lib
 ├── 📄 main.dart
@@ -41,6 +40,5 @@ Reads is a blogging app i am building as part of Blinq's assesmennt test. This r
 │  ├── 📄 string_extension.dart
 └── 📂 widgets/
 │  ├── 📄 categories.dart
-│  ├── 📄 showcase_categories.dart
-│  └── 📄 showcase_recommended_categories.dart
+│  └── 📄 showcase_categories.dart
 ```

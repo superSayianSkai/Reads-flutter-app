@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           textTheme: AppThemeFonts.textTheme(),
           scaffoldBackgroundColor: AppThemeColors.scafoldbackground,
         ),
+        debugShowCheckedModeBanner: false,
         home: Home(),
       ),
     );
