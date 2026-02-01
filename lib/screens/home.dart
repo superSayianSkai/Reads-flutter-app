@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:reads/models/blog.dart';
+import 'package:reads/screens/blog_post.dart';
 import 'package:reads/state/blog_provider.dart';
 import 'package:reads/utils/app_theme_colors.dart';
 import 'package:reads/utils/app_theme_fonts.dart';
 import 'package:reads/utils/app_theme_spacing.dart';
-import 'package:reads/widgets/categories.dart';
+import 'package:reads/widgets/categories_containers.dart';
 import 'package:reads/widgets/showcase_categories.dart';
 
 class Home extends StatelessWidget {
@@ -17,7 +18,8 @@ class Home extends StatelessWidget {
     final tappedUpperCategory = blogProvider.tapedCategory;
     final blogCategories = blogProvider.blog
         .map((item) => item.category)
-        .toSet();
+        .toSet()
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -29,7 +31,10 @@ class Home extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: blogProvider.blogCategories.length,
             itemBuilder: (context, index) {
-              return Categories(category: blogProvider.blogCategories[index]);
+              return CategoriesContainers(
+                category: blogProvider.blogCategories[index],
+                useAge: true,
+              );
             },
           ),
         ),
@@ -68,7 +73,7 @@ class Home extends StatelessWidget {
                     tappedUpperCategory,
                     tappedUpperCategory,
                     "Recommended",
-                    blogProvider,
+                    blogCategories,
                   ),
                 ],
               ),
@@ -101,7 +106,7 @@ class Home extends StatelessWidget {
                             : cat,
                         tappedUpperCategory,
                         cat,
-                        blogProvider,
+                        blogCategories,
                       ),
                     ],
                   );
@@ -120,7 +125,7 @@ Widget _buildSection(
   tappedUpperCategory,
   selectedCategory,
   category,
-  blog,
+  blogCategories,
 ) {
   if (tappedUpperCategory == "All topics") {
     return SizedBox(
@@ -144,6 +149,23 @@ Widget _buildSection(
               tappedUpperCategory: tappedUpperCategory,
               category: category,
               blog: blog,
+              picture: blog.picture,
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => BlogPost(
+                      picture: blog.picture,
+                      type: blog.type,
+                      topic: blog.title,
+                      career: blog.occupation,
+                      name: blog.authorsName,
+                      content: blog.content,
+                      date: blog.date,
+                      categoryList: blogCategories,
+                    ),
+                  ),
+                );
+              },
             ),
           );
         },
@@ -175,6 +197,23 @@ Widget _buildSection(
               normalUse: normalUse,
               category: category,
               blog: blog,
+              picture: blog.picture,
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => BlogPost(
+                      picture: blog.picture,
+                      type: blog.type,
+                      topic: blog.title,
+                      career: blog.occupation,
+                      name: blog.authorsName,
+                      content: blog.content,
+                      date: blog.date,
+                      categoryList: blogCategories,
+                    ),
+                  ),
+                );
+              },
             );
           },
         ),

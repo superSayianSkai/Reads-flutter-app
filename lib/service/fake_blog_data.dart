@@ -9,9 +9,9 @@ const fakeBlogData = [
     "authorsName": "Dr. Sledge Vaneem",
     "occupation": "Pelvic Specialist",
     "date": "6th June 2025",
-    "content": "In the early stages of learning how to build software, many developers believe that progress comes from constantly consuming new information, jumping between tutorials, frameworks, and tools in the hope that one more video or one more article will suddenly make everything click, but over time this habit often leads to confusion, shallow understanding, and a sense of being busy without actually moving forward in any meaningful way. What truly accelerates growth is not endless consumption, but deliberate practice paired with focused thinking, where concepts are understood deeply rather than memorized temporarily. Modern technology, while incredibly powerful, makes this kind of deep focus harder to achieve. Notifications, social media feeds, and the pressure to stay “up to date” fragment attention into tiny pieces, making it difficult to hold complex ideas in the mind for long enough to truly understand them. For developers, this is especially damaging because writing good code requires sustained concentration, mental clarity, and the ability to reason about systems, state, and edge cases without constant interruption. Developers who learn to protect their focus gain a significant advantage. By setting aside uninterrupted time to work on challenging problems, they train their minds to sit with discomfort, confusion, and uncertainty until clarity emerges. This process may feel slower at first, but it produces stronger mental models, better decision-making, and a deeper understanding of how things actually work under the hood. Over time, this depth compounds, making future learning faster and more intuitive. Building focus does not require extreme discipline or unrealistic routines. Small, consistent habits such as time-blocking work sessions, reducing unnecessary notifications, and clearly defining what needs to be accomplished before starting can dramatically improve productivity. Equally important is learning to embrace boredom and resist the urge to seek instant stimulation whenever a task becomes difficult, because that moment of resistance is where real growth happens. In the long run, the developers who stand out are not necessarily the ones who know the most tools, but the ones who can think clearly, work deeply, and apply their knowledge intentionally. Focus is not just a productivity hack; it is a foundational skill that shapes how effectively a developer learns, builds, and creates value in an increasingly distracted world",
+    "content": "In the early stages of learning how to build software...",
+    "picture": "assets/images/girl-down-removebg.png",
   },
-
   {
     "id": 2,
     "category": "Self-care",
@@ -22,8 +22,8 @@ const fakeBlogData = [
     "authorsName": "Sarah Jenkins",
     "occupation": "Postpartum Coach",
     "date": "10th October 2025",
-    "content":
-        "Self-care after a baby isn't about long spa days; it's about the 5-minute windows. Whether it's a hot cup of tea or a short breathing exercise, reclaiming small moments of your day is vital for your mental resilience.",
+    "content": "Self-care after a baby isn't about long spa days...",
+    "picture": "assets/images/happy-removebg.png",
   },
   {
     "id": 3,
@@ -36,7 +36,8 @@ const fakeBlogData = [
     "occupation": "Physiotherapist",
     "date": "6th October 2025",
     "content":
-        "The postpartum period, which follows childbirth, is a time of physical healing and adjustment for mothers. Experiencing pain is common and can vary in intensity depending on the type of delivery and individual recovery. Understanding and managing postpartum pain is crucial for comfort, mobility, and overall well-being. One of the most common postpartum pains is perineal pain, especially after vaginal delivery. This area, which may have experienced tears or an episiotomy, can feel sore and sensitive. Applying ice packs, using sitz baths, and taking prescribed pain relievers can help alleviate discomfort.",
+        "Pelvic floor health is a crucial but often overlooked part of postpartum recovery. The pelvic floor is a group of muscles that support the bladder, uterus, and bowel, and pregnancy places significant strain on them. After childbirth, these muscles may become weakened, leading to issues such as urinary incontinence, discomfort, or a feeling of heaviness. These symptoms are common, but they are not something you simply have to live with. Understanding what your body is experiencing is the first step toward healing.\n\nGentle pelvic floor exercises, often referred to as Kegels, can help rebuild strength and improve muscle control. However, timing and technique matter. Doing exercises incorrectly or too early can sometimes worsen symptoms. This is why guided recovery, either through a pelvic health specialist or structured programs, can make a huge difference.\n\nIt’s also important to recognize that recovery is not linear. Some days will feel better than others, and that’s completely normal. With patience, consistency, and proper support, most women experience significant improvement. Prioritizing pelvic floor health is not just about recovery—it’s about long-term comfort, confidence, and quality of life.",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 4,
@@ -48,8 +49,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Elena Rossi",
     "occupation": "Psychologist",
     "date": "12th October 2025",
-    "content":
-        "It's normal to feel emotional after birth, but knowing the difference between the 'baby blues' and Postpartum Depression (PPD) is key. We discuss the symptoms to watch for and when it's time to reach out for professional support.",
+    "content": "It's normal to feel emotional after birth...",
+    "picture": "assets/images/sad-girl-removebg.png",
   },
   {
     "id": 5,
@@ -61,8 +62,8 @@ const fakeBlogData = [
     "authorsName": "Amara Okafor",
     "occupation": "Doula",
     "date": "14th October 2025",
-    "content":
-        "Exploring cultural traditions from around the world that prioritize the 'sitting month' or specialized nutrition for new mothers to help the body recover through ancestral wisdom.",
+    "content": "Exploring cultural traditions from around the world...",
+    "picture": "assets/images/girl-laugh-removebg.png",
   },
   {
     "id": 6,
@@ -74,8 +75,8 @@ const fakeBlogData = [
     "authorsName": "Nurse Beth",
     "occupation": "Neonatal Nurse",
     "date": "15th October 2025",
-    "content":
-        "A step-by-step video guide on how to swaddle your baby safely to promote better sleep while ensuring hip health and temperature regulation.",
+    "content": "A step-by-step video guide on how to swaddle...",
+    "picture": "assets/images/happy-removebg.png",
   },
   {
     "id": 7,
@@ -87,8 +88,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Precious Daniels",
     "occupation": "Physiotherapist",
     "date": "16th October 2025",
-    "content":
-        "Movement is medicine, but timing is everything. This video demonstrates low-impact movements you can start doing at home to increase circulation without straining your recovery.",
+    "content": "Movement is medicine, but timing is everything...",
+    "picture": "assets/images/girl-laugh-removebg.png",
   },
   {
     "id": 8,
@@ -100,8 +101,8 @@ const fakeBlogData = [
     "authorsName": "Sarah Jenkins",
     "occupation": "Postpartum Coach",
     "date": "17th October 2025",
-    "content":
-        "Your thoughts shape your reality. We’ve curated 10 powerful affirmations for new mothers to help combat feelings of inadequacy and embrace the learning curve of parenthood.",
+    "content": "Your thoughts shape your reality...",
+    "picture": "assets/images/girl-bluff-removebg.png",
   },
   {
     "id": 9,
@@ -113,8 +114,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Sledge Vaneem",
     "occupation": "Nutritionist",
     "date": "18th October 2025",
-    "content":
-        "What you eat affects how you heal. Learn about the 'superfoods' that support tissue repair, boost energy levels, and provide the nutrients needed for breastfeeding mothers.",
+    "content": "What you eat affects how you heal...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 10,
@@ -126,8 +127,8 @@ const fakeBlogData = [
     "authorsName": "Amara Okafor",
     "occupation": "Doula",
     "date": "19th October 2025",
-    "content":
-        "From Jamu massage in Indonesia to Ayurvedic oil treatments, we look at how different cultures use touch and massage to help the uterus contract and reduce swelling.",
+    "content": "From Jamu massage in Indonesia...",
+    "picture": "assets/images/happy-removebg.png",
   },
   {
     "id": 11,
@@ -139,8 +140,8 @@ const fakeBlogData = [
     "authorsName": "Nurse Beth",
     "occupation": "Neonatal Nurse",
     "date": "20th October 2025",
-    "content":
-        "Newborns don't sleep like adults. Understanding their short sleep cycles and 'active sleep' phases can help parents feel less frustrated during those midnight wake-ups.",
+    "content": "Newborns don't sleep like adults...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 12,
@@ -152,8 +153,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Precious Daniels",
     "occupation": "Physiotherapist",
     "date": "21st October 2025",
-    "content":
-        "A specialized guide for mothers recovering from abdominal surgery. We discuss scar care, pain management, and how to lift your baby without hurting your incision.",
+    "content": "A specialized guide for mothers...",
+    "picture": "assets/images/happy-removebg.png",
   },
   {
     "id": 13,
@@ -165,8 +166,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Elena Rossi",
     "occupation": "Psychologist",
     "date": "22st October 2025",
-    "content":
-        "Returning to intimacy is a journey, not a destination. We talk about communication with your partner, physical readiness, and the emotional shifts that happen after birth.",
+    "content": "Returning to intimacy is a journey...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 14,
@@ -178,8 +179,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Sledge Vaneem",
     "occupation": "General Practitioner",
     "date": "23rd October 2025",
-    "content":
-        "Postpartum hair loss can be startling. Learn why it happens and how staying hydrated and taking specific vitamins can help support your body through hormonal shifts.",
+    "content": "Postpartum hair loss can be startling...",
+    "picture": "assets/images/girl-down-removebg.png",
   },
   {
     "id": 15,
@@ -191,8 +192,8 @@ const fakeBlogData = [
     "authorsName": "Nurse Beth",
     "occupation": "Neonatal Nurse",
     "date": "24th October 2025",
-    "content":
-        "In this video, we demonstrate the '5 S's' technique to calm a crying infant and provide tips for parents on staying calm when baby won't stop crying.",
+    "content": "In this video, we demonstrate the '5 S's'...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 16,
@@ -204,8 +205,8 @@ const fakeBlogData = [
     "authorsName": "Amara Okafor",
     "occupation": "Doula",
     "date": "25th October 2025",
-    "content":
-        "Western society often prioritizes independence, but most cultures believe it takes a village. We explore how to build your own support system even if family lives far away.",
+    "content": "Western society often prioritizes independence...",
+    "picture": "assets/images/girl-bluff-removebg.png",
   },
   {
     "id": 17,
@@ -217,8 +218,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Precious Daniels",
     "occupation": "Physiotherapist",
     "date": "26th October 2025",
-    "content":
-        "Poor posture during feeding can lead to chronic neck and back pain. We show you the best ergonomic positions and pillow setups to keep you comfortable while feeding.",
+    "content": "Poor posture during feeding can lead to pain...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 18,
@@ -230,8 +231,8 @@ const fakeBlogData = [
     "authorsName": "Dr. Elena Rossi",
     "occupation": "Psychologist",
     "date": "27th October 2025",
-    "content":
-        "Whether your birth went to plan or took a turn, writing down your story can be a therapeutic way to process the experience and celebrate your strength.",
+    "content": "Whether your birth went to plan...",
+    "picture": "assets/images/girl-mean-removebg.png",
   },
   {
     "id": 19,
@@ -243,8 +244,8 @@ const fakeBlogData = [
     "authorsName": "Sarah Jenkins",
     "occupation": "Postpartum Coach",
     "date": "28th October 2025",
-    "content":
-        "Sleep is a luxury, but quality matters over quantity. This video gives you tips on 'sleep hygiene' to help you fall back asleep faster after those middle-of-the-night feedings.",
+    "content": "Sleep is a luxury, but quality matters...",
+    "picture": "assets/images/girl-removebg.png",
   },
   {
     "id": 20,
@@ -256,7 +257,7 @@ const fakeBlogData = [
     "authorsName": "Nurse Beth",
     "occupation": "Neonatal Nurse",
     "date": "29th October 2025",
-    "content":
-        "A quick guide on identifying different types of diaper rash and the best practices for keeping your baby's skin dry and healthy.",
+    "content": "A quick guide on identifying diaper rash...",
+    "picture": "assets/images/girl-bluff-removebg.png",
   },
 ];

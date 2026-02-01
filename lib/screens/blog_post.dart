@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:provider/provider.dart';
+import 'package:reads/state/blog_provider.dart';
 import 'package:reads/utils/app_theme_colors.dart';
 import 'package:reads/utils/app_theme_spacing.dart';
 import 'package:reads/utils/string_extension.dart';
+import 'package:reads/widgets/categories_containers.dart';
 
 class BlogPost extends StatelessWidget {
+  final String picture;
   final String type;
   final String topic;
   final String career;
   final String name;
   final String content;
+  final String date;
+  final List<String> categoryList;
 
   const BlogPost({
     super.key,
+    required this.picture,
     required this.type,
     required this.topic,
     required this.career,
     required this.name,
     required this.content,
+    required this.date,
+    required this.categoryList,
   });
 
   @override
@@ -71,9 +80,9 @@ class BlogPost extends StatelessWidget {
                 height: 190,
                 decoration: BoxDecoration(
                   color: AppThemeColors.bodyandRecoveryCard,
-                  image: const DecorationImage(
-                    image: AssetImage("assets/images/girl-removebg.png"),
-                    fit: BoxFit.fitWidth,
+                  image: DecorationImage(
+                    image: AssetImage(picture),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -92,7 +101,35 @@ class BlogPost extends StatelessWidget {
                   ),
                 ),
               ),
-              AppThemeSpacing.mediumSpacing,
+              Center(
+                child: Text(
+                  date,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ),
+              AppThemeSpacing.largeSpacing,
+              SizedBox(
+                height: 40,
+                child: ListView.builder(
+                  padding: EdgeInsets.only(left: 12),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categoryList.length,
+                  itemBuilder: (context, index) {
+                    return CategoriesContainers(
+                      category: categoryList[index],
+                      useAge: false,
+                      onPressed: () {
+                        context.read<BlogProvider>().getTapedCategory(
+                          categoryList[index],
+                        );
+                        Navigator.of(context).pop();
+                      },
+                    );
+                  },
+                ),
+              ),
+              AppThemeSpacing.largeSpacing,
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Row(

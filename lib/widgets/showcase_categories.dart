@@ -15,6 +15,8 @@ class ShowCase extends StatelessWidget {
   final String tappedUpperCategory;
   final String category;
   final Blog blog;
+  final String picture;
+  final VoidCallback? onPressed;
 
   const ShowCase({
     super.key,
@@ -25,6 +27,8 @@ class ShowCase extends StatelessWidget {
     required this.category,
     required this.tappedUpperCategory,
     required this.blog,
+    required this.picture,
+    this.onPressed,
   });
 
   @override
@@ -50,19 +54,7 @@ class ShowCase extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
             child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => BlogPost(
-                      type: blog.type,
-                      topic: blog.title,
-                      career: blog.occupation,
-                      name: blog.authorsName,
-                      content: blog.content,
-                    ),
-                  ),
-                );
-              },
+              onTap: onPressed,
               child: Stack(
                 children: [
                   Padding(
@@ -120,7 +112,7 @@ class ShowCase extends StatelessWidget {
                     top: 0,
                     left: 0,
                     bottom: 0,
-                    child: Image.asset("assets/images/girl-removebg.png"),
+                    child: Image.asset(picture),
                   ),
                 ],
               ),

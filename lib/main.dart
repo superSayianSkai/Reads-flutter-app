@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:reads/screens/blog_post.dart';
 import 'package:reads/screens/home.dart';
 import 'package:reads/state/blog_provider.dart';
 import 'package:reads/utils/app_theme_colors.dart';

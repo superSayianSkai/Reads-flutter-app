@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:reads/models/blog.dart';
 import 'package:reads/service/fake_blog_data.dart';

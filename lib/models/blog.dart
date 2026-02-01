@@ -9,6 +9,7 @@ class Blog {
   final String occupation;
   final String date;
   final String content;
+  final String picture;
 
   Blog({
     required this.id,
@@ -21,6 +22,7 @@ class Blog {
     required this.occupation,
     required this.date,
     required this.content,
+    required this.picture,
   });
 
   factory Blog.fromJson(Map<String, dynamic> json) {
@@ -35,6 +37,7 @@ class Blog {
       occupation: json["occupation"],
       date: json["date"],
       content: json["content"],
+      picture: json['picture'],
     );
   }
 }
