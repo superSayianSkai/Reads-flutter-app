@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
                       children: [
                         AppThemeSpacing.mediumSpacing,
                         Text(
-                          "Recommendeded",
+                          "Recommended",
                           style: Theme.of(context).textTheme.headlineLarge,
                         ),
                         AppThemeSpacing.smallSpacing,
@@ -68,6 +68,7 @@ class Home extends StatelessWidget {
                     tappedUpperCategory,
                     tappedUpperCategory,
                     "Recommended",
+                    blogProvider,
                   ),
                 ],
               ),
@@ -100,6 +101,7 @@ class Home extends StatelessWidget {
                             : cat,
                         tappedUpperCategory,
                         cat,
+                        blogProvider,
                       ),
                     ],
                   );
@@ -118,6 +120,7 @@ Widget _buildSection(
   tappedUpperCategory,
   selectedCategory,
   category,
+  blog,
 ) {
   if (tappedUpperCategory == "All topics") {
     return SizedBox(
@@ -140,6 +143,7 @@ Widget _buildSection(
               normalUse: normalUse,
               tappedUpperCategory: tappedUpperCategory,
               category: category,
+              blog: blog,
             ),
           );
         },
@@ -170,6 +174,7 @@ Widget _buildSection(
               type: blog.type,
               normalUse: normalUse,
               category: category,
+              blog: blog,
             );
           },
         ),

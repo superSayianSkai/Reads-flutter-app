@@ -12,4 +12,5 @@ class AppThemeColors {
   static final culturalCase = const Color(0xFFFFD4D4);
   static final babyCare = const Color(0xFFE3F2FD);
   static final defaultColor = const Color(0xFFffe6c7);
+  
 }

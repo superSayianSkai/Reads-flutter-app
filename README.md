@@ -28,9 +28,10 @@ Reads is a blogging app i am building as part of Blinq's assesmennt test. This r
 └── 📂 models/
 │  ├── 📄 blog.dart
 └── 📂 screens/
+│  ├── 📄 blog_post.dart
 │  ├── 📄 home.dart
 └── 📂 service/
-│  ├── 📄 fakeBlogData.dart
+│  ├── 📄 fake_blog_data.dart
 └── 📂 state/
 │  ├── 📄 blog_provider.dart
 └── 📂 utils/

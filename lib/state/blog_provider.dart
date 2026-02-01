@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:reads/models/blog.dart';
-import 'package:reads/service/fakeBlogData.dart';
+import 'package:reads/service/fake_blog_data.dart';
 import 'package:reads/utils/app_theme_colors.dart';
 
 class BlogProvider extends ChangeNotifier {
@@ -37,6 +37,8 @@ class BlogProvider extends ChangeNotifier {
     ];
     notifyListeners();
   }
+
+  
 
   void _loadTitle() {
     _blogTitle = _blogs.map((item) => item.title).toList();
