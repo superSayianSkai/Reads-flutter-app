@@ -4,16 +4,16 @@
 Reads is a blogging app i am building as part of Blinq's assesmennt test. This repository showcase my progress with app so far.
 
 ## Features
-- Integrated custom themedata, colors, and typography (Google fonts)
-- Implemented Providers as the single source of truth for the app's state
-- Implemented a category carousel in the AppBar
-- Defined a fake Blog data and a model to structure 20 posts
-- Implemented dynamic filtering of blog posts by category
-- Added a "Recommended" section highlighting specific posts
-- Created reusable UI component (`ShowCase`) for blog post cards
-- Added utility extensions for string manipulation
-- Implemented a Blog Details screen with content and metadata
-- Implemented dynamic category-based card styling
+- Custom themedata, colors, and typography (Google fonts)
+- Providers as the single source of truth for the app's state
+- Category carousel in the AppBar
+- Fake Blog data and a model to structure 20 posts
+- A Dynamic filtering of blog posts by category
+- A "Recommended" section highlighting specific posts
+- Reusable UI component (`ShowCase`) for blog post cards
+- Utility extensions for string manipulation
+- A Blog Details screen with content and metadata
+- A dynamic category-based card styling
 
 ## Project Structure
 
