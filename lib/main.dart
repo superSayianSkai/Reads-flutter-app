@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BlogProvider()),
-        ChangeNotifierProvider(create: (_) => VideoProvider()..initialise()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
