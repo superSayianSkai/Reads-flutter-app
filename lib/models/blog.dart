@@ -9,6 +9,7 @@ class Blog {
   final String occupation;
   final String date;
   final String content;
+  final String image;
   final String picture;
 
   Blog({
@@ -22,6 +23,7 @@ class Blog {
     required this.occupation,
     required this.date,
     required this.content,
+    required this.image,
     required this.picture,
   });
 
@@ -37,6 +39,7 @@ class Blog {
       occupation: json["occupation"],
       date: json["date"],
       content: json["content"],
+      image:json['image'],
       picture: json['picture'],
     );
   }

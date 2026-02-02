@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:reads/models/blog.dart';
-import 'package:reads/screens/blog_post.dart';
-import 'package:reads/state/blog_provider.dart';
-import 'package:reads/utils/app_theme_colors.dart';
-import 'package:reads/utils/app_theme_fonts.dart';
-import 'package:reads/utils/app_theme_spacing.dart';
-import 'package:reads/widgets/categories_containers.dart';
-import 'package:reads/widgets/showcase_categories.dart';
+import 'package:be_calm/models/blog.dart';
+import 'package:be_calm/screens/blog_post.dart';
+import 'package:be_calm/state/blog_provider.dart';
+import 'package:be_calm/utils/app_theme_colors.dart';
+import 'package:be_calm/utils/app_theme_fonts.dart';
+import 'package:be_calm/utils/app_theme_spacing.dart';
+import 'package:be_calm/widgets/categories_containers.dart';
+import 'package:be_calm/widgets/showcase_categories.dart';
+import 'package:be_calm/state/video_provider.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -49,7 +50,7 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(26, 18, 18, 0),
+                    padding: const EdgeInsets.fromLTRB(26, 12, 18, 0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -77,7 +78,6 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-
             ...blogCategories
                 .where(
                   (element) =>
@@ -91,7 +91,7 @@ class Home extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(26, 18, 18, 0),
+                        padding: const EdgeInsets.fromLTRB(26, 0, 18, 0),
                         child: Text(
                           tappedUpperCategory == "All topics" ? cat : "",
                           style: Theme.of(context).textTheme.headlineLarge,
@@ -133,6 +133,7 @@ Widget _buildSection(
           ? 202
           : MediaQuery.of(context).size.height,
       child: ListView.builder(
+        padding: EdgeInsets.zero,
         scrollDirection: tappedUpperCategory == "All topics"
             ? Axis.horizontal
             : Axis.vertical,
@@ -149,22 +150,44 @@ Widget _buildSection(
               tappedUpperCategory: tappedUpperCategory,
               category: category,
               blog: blog,
-              picture: blog.picture,
+              image: blog.image,
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => BlogPost(
-                      picture: blog.picture,
-                      type: blog.type,
-                      topic: blog.title,
-                      career: blog.occupation,
-                      name: blog.authorsName,
-                      content: blog.content,
-                      date: blog.date,
-                      categoryList: blogCategories,
+                if (blog.type == "video") {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ChangeNotifierProvider(
+                        create: (_) => VideoProvider()..initialise(),
+                        child: BlogPost(
+                          picture: blog.picture,
+                          image: blog.image,
+                          type: blog.type,
+                          topic: blog.title,
+                          career: blog.occupation,
+                          name: blog.authorsName,
+                          content: blog.content,
+                          date: blog.date,
+                          categoryList: blogCategories,
+                        ),
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => BlogPost(
+                        picture: blog.picture,
+                        image: blog.image,
+                        type: blog.type,
+                        topic: blog.title,
+                        career: blog.occupation,
+                        name: blog.authorsName,
+                        content: blog.content,
+                        date: blog.date,
+                        categoryList: blogCategories,
+                      ),
+                    ),
+                  );
+                }
               },
             ),
           );
@@ -184,6 +207,7 @@ Widget _buildSection(
         ),
         AppThemeSpacing.mediumSpacing,
         ListView.builder(
+          padding: EdgeInsets.zero,
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: blogs.length,
@@ -197,22 +221,44 @@ Widget _buildSection(
               normalUse: normalUse,
               category: category,
               blog: blog,
-              picture: blog.picture,
+              image: blog.image,
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => BlogPost(
-                      picture: blog.picture,
-                      type: blog.type,
-                      topic: blog.title,
-                      career: blog.occupation,
-                      name: blog.authorsName,
-                      content: blog.content,
-                      date: blog.date,
-                      categoryList: blogCategories,
+                if (blog.type == "video") {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ChangeNotifierProvider(
+                        create: (_) => VideoProvider()..initialise(),
+                        child: BlogPost(
+                          picture: blog.picture,
+                          image: blog.image,
+                          type: blog.type,
+                          topic: blog.title,
+                          career: blog.occupation,
+                          name: blog.authorsName,
+                          content: blog.content,
+                          date: blog.date,
+                          categoryList: blogCategories,
+                        ),
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => BlogPost(
+                        picture: blog.picture,
+                        image: blog.image,
+                        type: blog.type,
+                        topic: blog.title,
+                        career: blog.occupation,
+                        name: blog.authorsName,
+                        content: blog.content,
+                        date: blog.date,
+                        categoryList: blogCategories,
+                      ),
+                    ),
+                  );
+                }
               },
             );
           },

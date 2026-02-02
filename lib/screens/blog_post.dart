@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:reads/state/blog_provider.dart';
-import 'package:reads/utils/app_theme_colors.dart';
-import 'package:reads/utils/app_theme_spacing.dart';
-import 'package:reads/utils/string_extension.dart';
-import 'package:reads/widgets/categories_containers.dart';
+import 'package:be_calm/state/blog_provider.dart';
+import 'package:be_calm/state/video_provider.dart';
+import 'package:be_calm/utils/app_theme_colors.dart';
+import 'package:be_calm/utils/app_theme_spacing.dart';
+import 'package:be_calm/utils/string_extension.dart';
+import 'package:be_calm/widgets/categories_containers.dart';
+import 'package:video_player/video_player.dart';
 
 class BlogPost extends StatelessWidget {
+  final String image;
   final String picture;
   final String type;
   final String topic;
@@ -19,6 +22,7 @@ class BlogPost extends StatelessWidget {
 
   const BlogPost({
     super.key,
+    required this.image,
     required this.picture,
     required this.type,
     required this.topic,
@@ -31,6 +35,7 @@ class BlogPost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final videoProvider = context.watch<VideoProvider>();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -75,17 +80,45 @@ class BlogPost extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: double.infinity,
-                height: 190,
-                decoration: BoxDecoration(
-                  color: AppThemeColors.bodyandRecoveryCard,
-                  image: DecorationImage(
-                    image: AssetImage(picture),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
+              type.toLowerCase() == "article"
+                  ? Container(
+                      width: double.infinity,
+                      height: 190,
+                      decoration: BoxDecoration(
+                        color: AppThemeColors.bodyandRecoveryCard,
+                        image: DecorationImage(
+                          image: AssetImage(image),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    )
+                  : videoProvider.isInitialised &&
+                        videoProvider.controller != null
+                  ? Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        AspectRatio(
+                          aspectRatio:
+                              videoProvider.controller!.value.aspectRatio,
+                          child: VideoPlayer(videoProvider.controller!),
+                        ),
+                        Center(
+                          child: IconButton(
+                            onPressed: () {
+                              videoProvider.playAndpause();
+                            },
+                            icon: Icon(
+                              videoProvider.controller!.value.isPlaying
+                                  ? Icons.pause
+                                  : Icons.play_arrow,
+                              color: Colors.white,
+                              size: 50,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  : Center(child: CircularProgressIndicator()),
               AppThemeSpacing.largeSpacing,
               AppThemeSpacing.largeSpacing,
               Padding(
@@ -143,9 +176,7 @@ class BlogPost extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(
-                              image: AssetImage(
-                                'assets/images/doctor-lady.jpeg',
-                              ),
+                              image: AssetImage(picture),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -199,12 +230,7 @@ class BlogPost extends StatelessWidget {
               Divider(thickness: 1),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Center(
-                  child: SizedBox(
-                    height: 30,
-                    child: Text("Reviewed by Dr. Precious Daniels"),
-                  ),
-                ),
+                child: Center(child: SizedBox(height: 30, child: Text(name))),
               ),
             ],
           ),

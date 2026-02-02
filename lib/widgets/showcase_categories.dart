@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:reads/models/blog.dart';
-import 'package:reads/screens/blog_post.dart';
-import 'package:reads/state/blog_provider.dart';
-import 'package:reads/utils/app_theme_spacing.dart';
-import 'package:reads/utils/string_extension.dart';
+import 'package:be_calm/models/blog.dart';
+import 'package:be_calm/state/blog_provider.dart';
+import 'package:be_calm/utils/app_theme_spacing.dart';
+import 'package:be_calm/utils/string_extension.dart';
 
 class ShowCase extends StatelessWidget {
   final bool normalUse;
@@ -15,7 +14,7 @@ class ShowCase extends StatelessWidget {
   final String tappedUpperCategory;
   final String category;
   final Blog blog;
-  final String picture;
+  final String image;
   final VoidCallback? onPressed;
 
   const ShowCase({
@@ -27,7 +26,7 @@ class ShowCase extends StatelessWidget {
     required this.category,
     required this.tappedUpperCategory,
     required this.blog,
-    required this.picture,
+    required this.image,
     this.onPressed,
   });
 
@@ -112,7 +111,7 @@ class ShowCase extends StatelessWidget {
                     top: 0,
                     left: 0,
                     bottom: 0,
-                    child: Image.asset(picture),
+                    child: Image.asset(image),
                   ),
                 ],
               ),

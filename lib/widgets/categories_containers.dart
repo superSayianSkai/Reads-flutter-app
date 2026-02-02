@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:reads/state/blog_provider.dart';
-import 'package:reads/utils/app_theme_colors.dart';
+import 'package:be_calm/state/blog_provider.dart';
+import 'package:be_calm/utils/app_theme_colors.dart';
 
 class CategoriesContainers extends StatelessWidget {
   final String category;

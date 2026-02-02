@@ -10,7 +10,8 @@ const fakeBlogData = [
     "occupation": "Pelvic Specialist",
     "date": "6th June 2025",
     "content": "In the early stages of learning how to build software...",
-    "picture": "assets/images/girl-down-removebg.png",
+    "image": "assets/images/girl-down-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@ const fakeBlogData = [
     "occupation": "Postpartum Coach",
     "date": "10th October 2025",
     "content": "Self-care after a baby isn't about long spa days...",
-    "picture": "assets/images/happy-removebg.png",
+    "image": "assets/images/happy-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 3,
@@ -37,7 +39,8 @@ const fakeBlogData = [
     "date": "6th October 2025",
     "content":
         "Pelvic floor health is a crucial but often overlooked part of postpartum recovery. The pelvic floor is a group of muscles that support the bladder, uterus, and bowel, and pregnancy places significant strain on them. After childbirth, these muscles may become weakened, leading to issues such as urinary incontinence, discomfort, or a feeling of heaviness. These symptoms are common, but they are not something you simply have to live with. Understanding what your body is experiencing is the first step toward healing.\n\nGentle pelvic floor exercises, often referred to as Kegels, can help rebuild strength and improve muscle control. However, timing and technique matter. Doing exercises incorrectly or too early can sometimes worsen symptoms. This is why guided recovery, either through a pelvic health specialist or structured programs, can make a huge difference.\n\nIt’s also important to recognize that recovery is not linear. Some days will feel better than others, and that’s completely normal. With patience, consistency, and proper support, most women experience significant improvement. Prioritizing pelvic floor health is not just about recovery—it’s about long-term comfort, confidence, and quality of life.",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 4,
@@ -50,7 +53,8 @@ const fakeBlogData = [
     "occupation": "Psychologist",
     "date": "12th October 2025",
     "content": "It's normal to feel emotional after birth...",
-    "picture": "assets/images/sad-girl-removebg.png",
+    "image": "assets/images/sad-girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 5,
@@ -63,7 +67,8 @@ const fakeBlogData = [
     "occupation": "Doula",
     "date": "14th October 2025",
     "content": "Exploring cultural traditions from around the world...",
-    "picture": "assets/images/girl-laugh-removebg.png",
+    "image": "assets/images/girl-laugh-removebg.png",
+    "picture": " 'assets/images/doctor-lady.jpeg",
   },
   {
     "id": 6,
@@ -76,7 +81,8 @@ const fakeBlogData = [
     "occupation": "Neonatal Nurse",
     "date": "15th October 2025",
     "content": "A step-by-step video guide on how to swaddle...",
-    "picture": "assets/images/happy-removebg.png",
+    "image": "assets/images/happy-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 7,
@@ -89,7 +95,8 @@ const fakeBlogData = [
     "occupation": "Physiotherapist",
     "date": "16th October 2025",
     "content": "Movement is medicine, but timing is everything...",
-    "picture": "assets/images/girl-laugh-removebg.png",
+    "image": "assets/images/girl-laugh-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 8,
@@ -102,7 +109,8 @@ const fakeBlogData = [
     "occupation": "Postpartum Coach",
     "date": "17th October 2025",
     "content": "Your thoughts shape your reality...",
-    "picture": "assets/images/girl-bluff-removebg.png",
+    "image": "assets/images/girl-bluff-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg,",
   },
   {
     "id": 9,
@@ -115,7 +123,8 @@ const fakeBlogData = [
     "occupation": "Nutritionist",
     "date": "18th October 2025",
     "content": "What you eat affects how you heal...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 10,
@@ -128,7 +137,8 @@ const fakeBlogData = [
     "occupation": "Doula",
     "date": "19th October 2025",
     "content": "From Jamu massage in Indonesia...",
-    "picture": "assets/images/happy-removebg.png",
+    "image": "assets/images/happy-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 11,
@@ -141,7 +151,8 @@ const fakeBlogData = [
     "occupation": "Neonatal Nurse",
     "date": "20th October 2025",
     "content": "Newborns don't sleep like adults...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 12,
@@ -154,7 +165,8 @@ const fakeBlogData = [
     "occupation": "Physiotherapist",
     "date": "21st October 2025",
     "content": "A specialized guide for mothers...",
-    "picture": "assets/images/happy-removebg.png",
+    "image": "assets/images/happy-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 13,
@@ -167,7 +179,8 @@ const fakeBlogData = [
     "occupation": "Psychologist",
     "date": "22st October 2025",
     "content": "Returning to intimacy is a journey...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 14,
@@ -180,7 +193,8 @@ const fakeBlogData = [
     "occupation": "General Practitioner",
     "date": "23rd October 2025",
     "content": "Postpartum hair loss can be startling...",
-    "picture": "assets/images/girl-down-removebg.png",
+    "image": "assets/images/girl-down-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 15,
@@ -193,7 +207,8 @@ const fakeBlogData = [
     "occupation": "Neonatal Nurse",
     "date": "24th October 2025",
     "content": "In this video, we demonstrate the '5 S's'...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 16,
@@ -206,7 +221,8 @@ const fakeBlogData = [
     "occupation": "Doula",
     "date": "25th October 2025",
     "content": "Western society often prioritizes independence...",
-    "picture": "assets/images/girl-bluff-removebg.png",
+    "image": "assets/images/girl-bluff-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 17,
@@ -219,7 +235,8 @@ const fakeBlogData = [
     "occupation": "Physiotherapist",
     "date": "26th October 2025",
     "content": "Poor posture during feeding can lead to pain...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 18,
@@ -232,7 +249,8 @@ const fakeBlogData = [
     "occupation": "Psychologist",
     "date": "27th October 2025",
     "content": "Whether your birth went to plan...",
-    "picture": "assets/images/girl-mean-removebg.png",
+    "image": "assets/images/girl-mean-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 19,
@@ -245,7 +263,8 @@ const fakeBlogData = [
     "occupation": "Postpartum Coach",
     "date": "28th October 2025",
     "content": "Sleep is a luxury, but quality matters...",
-    "picture": "assets/images/girl-removebg.png",
+    "image": "assets/images/girl-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 20,
@@ -258,6 +277,7 @@ const fakeBlogData = [
     "occupation": "Neonatal Nurse",
     "date": "29th October 2025",
     "content": "A quick guide on identifying diaper rash...",
-    "picture": "assets/images/girl-bluff-removebg.png",
+    "image": "assets/images/girl-bluff-removebg.png",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
 ];
