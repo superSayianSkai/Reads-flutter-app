@@ -1,7 +1,7 @@
-## Reads 
+## BeCalm
 
 ## Getting Started
-Reads is a blogging app i am building as part of Blinq's assesmennt test. This repository showcase my progress with app so far.
+BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This repository showcase my progress with app so far.
 
 ## Features
 - Custom themedata, colors, and typography (Google fonts)
@@ -14,15 +14,48 @@ Reads is a blogging app i am building as part of Blinq's assesmennt test. This r
 - Utility extensions for string manipulation
 - A Blog Details screen with content and metadata
 - A dynamic category-based card styling
+- Video Content Support: Integrated video player for video-type blog posts
+- Responsive Navigation: Seamless switching between horizontal and vertical list views
+- Cross-Screen Category Filtering: Navigate to filtered category views directly from blog post tags
+- Author Profiles: Detailed author information with verification badges
+- Multi-Provider Architecture: Scalable state management using `MultiProvider`
 
 ## Project Structure
 
 ```markdown
 . 📂 assets
+└── 📂 fix/
+│  ├── 📄 girl-bluff.png
+│  ├── 📄 girl-down.png
+│  ├── 📄 girl-laugh.png
+│  ├── 📄 girl-mean.png
+│  ├── 📄 girl-serious.png
+│  ├── 📄 girl-shocked-2.png
+│  ├── 📄 girl-shocked.png
+│  ├── 📄 girl-smile.png
+│  ├── 📄 girl-stern.png
+└── 📂 icons/
+│  ├── 📄 check.png
 └── 📂 images/
+│  ├── 📄 Gemini_Generated_Image_fy9rqqfy9rqqfy9r.png
+│  ├── 📄 doctor-lady.jpeg
+│  ├── 📄 girl-bluff-removebg.png
+│  ├── 📄 girl-down-removebg.png
+│  ├── 📄 girl-laugh-removebg.png
+│  ├── 📄 girl-mean-removebg.png
 │  ├── 📄 girl-removebg.png
-│  ├── 📄 girl.png
-│  └── 📄 girl2.png
+│  ├── 📄 girl2-removebg.png
+│  ├── 📄 happy-removebg.png
+│  ├── 📄 sad-girl-removebg.png
+│  ├── 📄 sad-girl.png
+└── 📂 launcher/
+│  ├── 📄 launcher.png
+└── 📂 splash/
+│  ├── 📄 Becalm-removebg.png
+│  ├── 📄 Becalm.png
+│  ├── 📄 beclam.png
+└── 📂 video/
+│  └── 📄 video.mp4
 ```
 ```markdown
 . 📂 lib
@@ -36,12 +69,13 @@ Reads is a blogging app i am building as part of Blinq's assesmennt test. This r
 │  ├── 📄 fake_blog_data.dart
 └── 📂 state/
 │  ├── 📄 blog_provider.dart
+│  ├── 📄 video_provider.dart
 └── 📂 utils/
 │  ├── 📄 app_theme_colors.dart
 │  ├── 📄 app_theme_fonts.dart
 │  ├── 📄 app_theme_spacing.dart
 │  ├── 📄 string_extension.dart
 └── 📂 widgets/
-│  ├── 📄 categories.dart
+│  ├── 📄 categories_containers.dart
 │  └── 📄 showcase_categories.dart
 ```
