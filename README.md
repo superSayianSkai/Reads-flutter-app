@@ -65,10 +65,16 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 └── 📂 screens/
 │  ├── 📄 blog_post.dart
 │  ├── 📄 home.dart
+│  ├── 📄 message.dart
+│  ├── 📄 post.dart
+│  ├── 📄 screen_shell.dart
+│  ├── 📄 search.dart
+│  ├── 📄 user.dart
 └── 📂 service/
 │  ├── 📄 fake_blog_data.dart
 └── 📂 state/
 │  ├── 📄 blog_provider.dart
+│  ├── 📄 screen_shell_provider.dart
 │  ├── 📄 video_provider.dart
 └── 📂 utils/
 │  ├── 📄 app_theme_colors.dart
