@@ -19,6 +19,8 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 - Cross-Screen Category Filtering: Navigate to filtered category views directly from blog post tags
 - Author Profiles: Detailed author information with verification badges
 - Multi-Provider Architecture: Scalable state management using `MultiProvider`
+- Onboarding Screen
+- A functional bottom Navigationbar
 
 ## Project Structure
 
@@ -62,19 +64,24 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 ├── 📄 main.dart
 └── 📂 models/
 │  ├── 📄 blog.dart
+│  ├── 📄 search_carousel.dart
 └── 📂 screens/
 │  ├── 📄 blog_post.dart
 │  ├── 📄 home.dart
-│  ├── 📄 message.dart
+│  ├── 📄 notification.dart
+│  ├── 📄 onboarding_screen.dart
 │  ├── 📄 post.dart
 │  ├── 📄 screen_shell.dart
 │  ├── 📄 search.dart
 │  ├── 📄 user.dart
 └── 📂 service/
 │  ├── 📄 fake_blog_data.dart
+│  ├── 📄 search_blog_carousel_data.dart
+│  ├── 📄 search_top_blog.dart
 └── 📂 state/
 │  ├── 📄 blog_provider.dart
 │  ├── 📄 screen_shell_provider.dart
+│  ├── 📄 search_carousel_provider.dart
 │  ├── 📄 video_provider.dart
 └── 📂 utils/
 │  ├── 📄 app_theme_colors.dart
@@ -83,5 +90,7 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 │  ├── 📄 string_extension.dart
 └── 📂 widgets/
 │  ├── 📄 categories_containers.dart
-│  └── 📄 showcase_categories.dart
+│  ├── 📄 my_button.dart
+│  ├── 📄 onboarding_page.dart
+│  └── 📄 showcase.dart
 ```
