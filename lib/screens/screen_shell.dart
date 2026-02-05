@@ -52,7 +52,7 @@ class ScreenShell extends StatelessWidget {
             label: "Post",
           ),
           BottomNavigationBarItem(
-            icon: Icon(LucideIcons.messageCircle),
+            icon: Icon(LucideIcons.bell),
             label: "message",
           ),
           BottomNavigationBarItem(

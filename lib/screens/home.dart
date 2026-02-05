@@ -4,10 +4,9 @@ import 'package:be_calm/models/blog.dart';
 import 'package:be_calm/screens/blog_post.dart';
 import 'package:be_calm/state/blog_provider.dart';
 import 'package:be_calm/utils/app_theme_colors.dart';
-import 'package:be_calm/utils/app_theme_fonts.dart';
 import 'package:be_calm/utils/app_theme_spacing.dart';
 import 'package:be_calm/widgets/categories_containers.dart';
-import 'package:be_calm/widgets/showcase_categories.dart';
+import 'package:be_calm/widgets/showcase.dart';
 import 'package:be_calm/state/video_provider.dart';
 
 class Home extends StatelessWidget {
@@ -25,23 +24,28 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: SizedBox(
-          height: 40,
-          child: ListView.builder(
-            padding: EdgeInsets.only(left: 12),
-            scrollDirection: Axis.horizontal,
-            itemCount: blogProvider.blogCategories.length,
-            itemBuilder: (context, index) {
-              return CategoriesContainers(
-                category: blogProvider.blogCategories[index],
-                useAge: true,
-              );
-            },
-          ),
+        title: Column(
+          children: [
+            SizedBox(
+              height: 40,
+              child: ListView.builder(
+                padding: EdgeInsets.only(left: 12),
+                scrollDirection: Axis.horizontal,
+                itemCount: blogProvider.blogCategories.length,
+                itemBuilder: (context, index) {
+                  return CategoriesContainers(
+                    category: blogProvider.blogCategories[index],
+                    useAge: true,
+                  );
+                },
+              ),
+            ),
+          ],
         ),
         backgroundColor: AppThemeColors.scafoldbackground,
       ),
       body: SingleChildScrollView(
+        primary: false,
         child: Column(
           children: [
             if (blogProvider.blog.any((b) => b.isRecommended) &&
@@ -92,21 +96,37 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(26, 0, 18, 0),
-                        child: Text(
-                          tappedUpperCategory == "All topics" ? cat : "",
-                          style: Theme.of(context).textTheme.headlineLarge,
-                        ),
+                        child: tappedUpperCategory == "All topics"
+                            ? Text(
+                                cat,
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineLarge,
+                              )
+                            : const SizedBox.shrink(),
                       ),
-                      _buildSection(
-                        context,
-                        blogs,
-                        true,
-                        tappedUpperCategory == "All topics"
-                            ? tappedUpperCategory
-                            : cat,
-                        tappedUpperCategory,
-                        cat,
-                        blogCategories,
+
+                      Padding(
+                        padding: tappedUpperCategory == "All topics"
+                            ? const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 12,
+                              )
+                            : const EdgeInsets.symmetric(
+                                horizontal: 0,
+                                vertical: 12,
+                              ),
+                        child: _buildSection(
+                          context,
+                          blogs,
+                          true,
+                          tappedUpperCategory == "All topics"
+                              ? tappedUpperCategory
+                              : cat,
+                          tappedUpperCategory,
+                          cat,
+                          blogCategories,
+                        ),
                       ),
                     ],
                   );
@@ -149,7 +169,6 @@ Widget _buildSection(
               normalUse: normalUse,
               tappedUpperCategory: tappedUpperCategory,
               category: category,
-              blog: blog,
               image: blog.image,
               onPressed: () {
                 if (blog.type == "video") {
@@ -197,15 +216,12 @@ Widget _buildSection(
   }
 
   return Padding(
-    padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
+    padding: tappedUpperCategory == "All topics"
+        ? EdgeInsets.symmetric(horizontal: 10)
+        : EdgeInsets.symmetric(horizontal: 0),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Text(selectedCategory, style: AppThemeFonts.headineLarge),
-        ),
-        AppThemeSpacing.mediumSpacing,
         ListView.builder(
           padding: EdgeInsets.zero,
           physics: const NeverScrollableScrollPhysics(),
@@ -220,8 +236,9 @@ Widget _buildSection(
               type: blog.type,
               normalUse: normalUse,
               category: category,
-              blog: blog,
               image: blog.image,
+              authorName: blog.authorsName,
+              authorPic: blog.picture,
               onPressed: () {
                 if (blog.type == "video") {
                   Navigator.of(context).push(

@@ -77,6 +77,7 @@ class BlogPost extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          primary: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -230,7 +231,9 @@ class BlogPost extends StatelessWidget {
               Divider(thickness: 1),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Center(child: SizedBox(height: 30, child: Text("Reviewed by $name"))),
+                child: Center(
+                  child: SizedBox(height: 30, child: Text("Reviewed by $name")),
+                ),
               ),
             ],
           ),

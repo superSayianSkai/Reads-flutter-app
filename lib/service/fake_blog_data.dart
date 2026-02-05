@@ -68,7 +68,7 @@ const fakeBlogData = [
     "date": "14th October 2025",
     "content": "Exploring cultural traditions from around the world...",
     "image": "assets/images/girl-laugh-removebg.png",
-    "picture": " 'assets/images/doctor-lady.jpeg",
+    "picture": "assets/images/doctor-lady.jpeg",
   },
   {
     "id": 6,

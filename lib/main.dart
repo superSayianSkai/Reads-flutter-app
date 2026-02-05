@@ -1,9 +1,10 @@
+import 'package:be_calm/screens/onboarding_screen.dart';
 import 'package:be_calm/screens/screen_shell.dart';
 import 'package:be_calm/state/screen_shell_provider.dart';
+import 'package:be_calm/state/search_carousel_provider.dart';
 import 'package:be_calm/state/video_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:be_calm/screens/home.dart';
 import 'package:be_calm/state/blog_provider.dart';
 import 'package:be_calm/utils/app_theme_colors.dart';
 import 'package:be_calm/utils/app_theme_fonts.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => BlogProvider()),
         ChangeNotifierProvider(create: (_) => VideoProvider()),
-        ChangeNotifierProvider(create: (_)=> ScreenShellProvider())
+        ChangeNotifierProvider(create: (_) => ScreenShellProvider()),
+        ChangeNotifierProvider(create: (_) => SearchProvider()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -32,7 +34,10 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
-        routes: {'/': (context) => const ScreenShell()},
+        routes: {
+          '/': (context) => OnboardingScreens(),
+          "home": (context) => ScreenShell(),
+        },
       ),
     );
   }
