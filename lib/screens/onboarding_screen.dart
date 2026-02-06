@@ -1,54 +1,35 @@
+import 'package:be_calm/state/onBoarding_screen_provider.dart';
 import 'package:be_calm/utils/app_theme_colors.dart';
 import 'package:be_calm/utils/app_theme_spacing.dart';
 import 'package:be_calm/widgets/my_button.dart';
-import 'package:be_calm/widgets/onboarding_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class OnboardingScreens extends StatefulWidget {
+class OnboardingScreens extends StatelessWidget {
   const OnboardingScreens({super.key});
-  @override
-  State<OnboardingScreens> createState() => _OnboardingScreensState();
-}
-
-class _OnboardingScreensState extends State<OnboardingScreens> {
-  final PageController _pageController = PageController();
-  int currentPage = 0;
-
-  final List<Widget> pages = [
-    OnboardingPage(
-      words: "Enjoy high quality blogs to elevate your life from experts",
-      imagePath: "assets/onboarding/expert.gif",
-    ),
-    OnboardingPage(
-      words: "Blog authors are verified to help reduce misinformation",
-      imagePath: "assets/onboarding/verified.gif",
-    ),
-    OnboardingPage(
-      words: "Get educated about your health with BeCalm",
-      imagePath: "assets/onboarding/skils.gif",
-    ),
-    OnboardingPage(words: "", page: 3),
-  ];
-
+  
   @override
   Widget build(BuildContext context) {
+    final onboardingPageProvider = context.watch<OnboardingScreenProvider>();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
           PageView(
-            controller: _pageController,
+            controller: onboardingPageProvider.controller,
             onPageChanged: (index) {
-              setState(() => currentPage = index);
+              onboardingPageProvider.getPageIndex(index);
             },
-            children: pages,
+            children: onboardingPageProvider.onBoardingData,
           ),
 
           Positioned(
             bottom: 60,
             left: 0,
             right: 0,
-            child: currentPage == pages.length - 1
+            child:
+                onboardingPageProvider.currentPage ==
+                    onboardingPageProvider.onBoardingData.length - 1
                 ? Container(
                     height: 450,
                     decoration: BoxDecoration(
@@ -89,14 +70,16 @@ class _OnboardingScreensState extends State<OnboardingScreens> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
-                        pages.length - 1,
+                        onboardingPageProvider.onBoardingData.length - 1,
                         (index) => Container(
-                          width: currentPage == index ? 34 : 15,
+                          width: onboardingPageProvider.currentPage == index
+                              ? 34
+                              : 15,
                           height: 15,
                           margin: const EdgeInsets.symmetric(horizontal: 6),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: currentPage == index
+                            color: onboardingPageProvider.currentPage == index
                                 ? AppThemeColors.buttonColorActive
                                 : AppThemeColors.bodyandRecoveryCard,
                           ),

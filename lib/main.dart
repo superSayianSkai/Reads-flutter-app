@@ -1,5 +1,6 @@
 import 'package:be_calm/screens/onboarding_screen.dart';
 import 'package:be_calm/screens/screen_shell.dart';
+import 'package:be_calm/state/onBoarding_screen_provider.dart';
 import 'package:be_calm/state/screen_shell_provider.dart';
 import 'package:be_calm/state/search_carousel_provider.dart';
 import 'package:be_calm/state/video_provider.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => VideoProvider()),
         ChangeNotifierProvider(create: (_) => ScreenShellProvider()),
         ChangeNotifierProvider(create: (_) => SearchProvider()),
+        ChangeNotifierProvider(create: (_) => OnboardingScreenProvider()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
