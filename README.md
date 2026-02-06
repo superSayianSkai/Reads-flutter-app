@@ -40,6 +40,7 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 │  ├── 📄 check.png
 └── 📂 images/
 │  ├── 📄 Gemini_Generated_Image_fy9rqqfy9rqqfy9r.png
+│  ├── 📄 cooking-girl.png
 │  ├── 📄 doctor-lady.jpeg
 │  ├── 📄 girl-bluff-removebg.png
 │  ├── 📄 girl-down-removebg.png
@@ -50,9 +51,17 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 │  ├── 📄 happy-removebg.png
 │  ├── 📄 sad-girl-removebg.png
 │  ├── 📄 sad-girl.png
+│  ├── 📄 yoga.png
 └── 📂 launcher/
 │  ├── 📄 launcher.png
+└── 📂 onboarding/
+│  ├── 📄 expert.gif
+│  ├── 📄 skils.gif
+│  ├── 📄 update.gif
+│  ├── 📄 verified.gif
+│  ├── 📄 wears.gif
 └── 📂 splash/
+│  ├── 📄 Becalm-android.png
 │  ├── 📄 Becalm-removebg.png
 │  ├── 📄 Becalm.png
 │  ├── 📄 beclam.png
@@ -64,6 +73,7 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 ├── 📄 main.dart
 └── 📂 models/
 │  ├── 📄 blog.dart
+│  ├── 📄 onboarding_page_model.dart
 │  ├── 📄 search_carousel.dart
 └── 📂 screens/
 │  ├── 📄 blog_post.dart
@@ -76,10 +86,12 @@ BeCalm is a blogging app i am building as part of Blinq's assesmennt test. This 
 │  ├── 📄 user.dart
 └── 📂 service/
 │  ├── 📄 fake_blog_data.dart
+│  ├── 📄 onboarding_data.dart
 │  ├── 📄 search_blog_carousel_data.dart
 │  ├── 📄 search_top_blog.dart
 └── 📂 state/
 │  ├── 📄 blog_provider.dart
+│  ├── 📄 onboarding_screen_provider.dart
 │  ├── 📄 screen_shell_provider.dart
 │  ├── 📄 search_carousel_provider.dart
 │  ├── 📄 video_provider.dart
