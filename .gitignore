@@ -1,0 +1,66 @@
+# =====================================
+# General Ignores
+# =====================================
+.DS_Store
+.history
+*.log
+*.swp
+*.pyc
+*.class
+migrate_working_dir/
+stuff/
+
+# =====================================
+# IDE and Editor Specific
+# =====================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Atom
+.atom/
+
+# SwiftPM
+.swiftpm/
+
+# =====================================
+# Flutter / Mobile Specific
+# =====================================
+# Dart/Flutter build artifacts and caches
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+**/doc/api/
+
+# iOS specific
+**/ios/Flutter/.last_build_id
+
+# Android specific build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Mobile module specific
+mobile/.dart_tool/
+mobile/build/
+mobile/.packages
+mobile/generated/
+
+# Symbolication and Obfuscation
+app.*.symbols
+app.*.map.json
+
+# =====================================
+# API / Backend Specific
+# =====================================
+api/node_modules/
+api/*.log
+api/db/*.sqlite3
