@@ -61,6 +61,19 @@ app.*.map.json
 # =====================================
 # API / Backend Specific
 # =====================================
-api/node_modules/
-api/*.log
-api/db/*.sqlite3
+# Server (Rails) Ignores
+server/.bundle
+server/.env*
+server/log/*
+!server/log/.keep
+server/tmp/*
+!server/tmp/.keep
+server/tmp/pids/*
+!server/tmp/pids/
+!server/tmp/pids/.keep
+server/storage/*
+!server/storage/.keep
+server/tmp/storage/*
+!server/tmp/storage/
+!server/tmp/storage/.keep
+server/config/*.key
