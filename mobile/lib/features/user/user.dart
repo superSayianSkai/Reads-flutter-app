@@ -49,7 +49,7 @@ class User extends StatelessWidget {
                 ),
               ),
               AppThemeSpacing.mediumSpacing,
-              Text('Skai', style: AppThemeFonts.headlineMedium),
+              Text('SaiyanSkai', style: AppThemeFonts.headlineMedium),
               AppThemeSpacing.largeSpacing,
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
